@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="./jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function(){
                 
@@ -15,24 +15,116 @@
                 // $(this).removeClass('active');
                 // });
 
-                setInterval(change,6000);
-                // setInterval(fade,800);
+                // setInterval(change,3000);
+                // // setInterval(fade,800);
 
-                function change()
-                {
-                    $('div').next('div').addClass('active');
-                }
-
-                // function fade()
+                // function change()
                 // {
-                //     $('.container').find('div').eq(6).removeClass("active");
+                //     $('div').addClass('active');
                 // }
 
-                $('div').click(function(){
-                    $(this).removeClass('active');
+                // // function fade()
+                // // {
+                // //     $('.container').find('div').eq(6).removeClass("active");
+                // // }
+
+                // $('div').hover(function(){
+                //     $(this).removeClass('active');
+                // });
+
+                // function random()
+                // {
+                //     return Math.floor(Math.random())
+
+                // }   
+
+                // setInterval(ran,1000);
+                
+                // let ran = Math.floor(Math.random()*$('div').addClass("active"));
+
+                // $(".container").find('div').eq(ran);
+
+                    setInterval(random,1500);
+
+                var classes = ['active','fr'];
+                function random()
+                {
+                $('div').each(function(i){
+                    $(this).addClass(classes[Math.floor(Math.random()*classes.length)]);
                 });
+
+                $('div').each(function(i){
+                    $(this).removeClass(classes[Math.floor(Math.random()*classes.length)]);
+                });
+                };
+
+               $('div').click(function(){
+                $(this).removeClass('active');
+               })
         });
     </script>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(50, 50, 50);
+}
+.container div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(147, 103, 37);
+  margin: 10px;
+  box-shadow: 3px 7px 6px rgb(49, 42, 33);
+}
+
+.container {
+  margin: 100px auto;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 30%;
+  justify-content: center;
+  margin-left: 35%;
+}
+
+.container .active {
+  background-color: white;
+}
+
+.container .fr {
+  background-color: rgb(147, 103, 37);
+}
+
+
+@media screen and (max-width:480px){
+    .container {
+        margin: 100px auto;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+      
+        width: 60vw;
+        justify-content: center;
+        
+        margin-left: 35%;
+      }
+ 
+      
+
+      .container div {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(147, 103, 37);
+        margin: 10px;
+        box-shadow: 3px 7px 6px rgb(49, 42, 33);
+      }
+}
+    </style>
     <title>GAME</title>
 </head>
 <body>
