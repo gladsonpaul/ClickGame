@@ -1,0 +1,36 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(50, 50, 50);
+}
+.container div
+{
+    
+    width: 100px;
+    height: 100px;
+    background-color: rgb(147, 103, 37);
+    margin: 10px;
+    box-shadow: 3px 7px 6px rgb(49, 42, 33);
+}
+
+.container
+{
+    margin: 100px auto;
+    position: absolute;
+   display: flex;
+   flex-wrap: wrap;
+   width: 30%;
+   justify-content: center;
+    margin-left:35%;
+}
+
+.container .active
+{
+    background-color: white;
+}
