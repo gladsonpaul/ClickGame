@@ -15,14 +15,22 @@
                 // $(this).removeClass('active');
                 // });
 
-                setInterval(change,2000);
+                setInterval(change,6000);
+                // setInterval(fade,800);
 
                 function change()
                 {
-                    $('.container').find('div').eq(2).addClass("active");
+                    $('div').next('div').addClass('active');
                 }
 
-                
+                // function fade()
+                // {
+                //     $('.container').find('div').eq(6).removeClass("active");
+                // }
+
+                $('div').click(function(){
+                    $(this).removeClass('active');
+                });
         });
     </script>
     <title>GAME</title>
